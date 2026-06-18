@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Регистрация — БизнесПро</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo"><span class="logo__mark">БП</span><span class="logo__name">БизнесПро</span></a>
+    <div class="nav__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm">Войти</a>
+    </div>
+  </div>
+</header>
+
+<div class="auth-page">
+  <div class="auth-card" style="max-width:500px">
+    <div class="auth-card__logo"><span class="logo__mark">БП</span><span>БизнесПро</span></div>
+    <h1 class="auth-card__title">Регистрация</h1>
+    <p class="auth-card__sub">Выберите вашу роль в системе</p>
+
+    <div class="role-select">
+      <div class="role-option">
+        <input type="radio" name="role" id="r-client" checked/>
+        <label for="r-client"><span class="role-icon">👤</span>Клиент</label>
+      </div>
+      <div class="role-option">
+        <input type="radio" name="role" id="r-consult"/>
+        <label for="r-consult"><span class="role-icon">💼</span>Консультант</label>
+      </div>
+      <div class="role-option">
+        <input type="radio" name="role" id="r-admin"/>
+        <label for="r-admin"><span class="role-icon">⚙️</span>Администратор</label>
+      </div>
+    </div>
+
+    <form action="client-dashboard.html" method="get">
+      <div class="profile-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div class="form-group" style="margin-bottom:0"><label>Имя *</label><input type="text" placeholder="Иван" required/></div>
+        <div class="form-group" style="margin-bottom:0"><label>Фамилия *</label><input type="text" placeholder="Иванов" required/></div>
+      </div>
+      <div style="height:14px"></div>
+      <div class="form-group"><label>Email *</label><input type="email" placeholder="mail@example.com" required/></div>
+      <div class="form-group"><label>Телефон *</label><input type="tel" placeholder="+7 (___) ___-__-__" required/></div>
+      <div class="form-group"><label>Пароль *</label><input type="password" placeholder="Минимум 6 символов" required/></div>
+      <div class="form-group"><label>Повторите пароль *</label><input type="password" placeholder="Повторите пароль" required/></div>
+      <button type="submit" class="btn btn--primary btn--full">Зарегистрироваться</button>
+      <p class="form-note" style="margin-top:12px">Регистрируясь, вы соглашаетесь с <a href="#">условиями использования</a> и <a href="#">политикой конфиденциальности</a></p>
+    </form>
+
+    <div class="auth-card__footer">Уже есть аккаунт? <a href="login.html">Войти</a></div>
+  </div>
+</div>
+</body>
+</html>

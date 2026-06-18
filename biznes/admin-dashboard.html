@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Панель администратора — БизнесПро</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo"><span class="logo__mark">БП</span><span class="logo__name">БизнесПро</span></a>
+    <div class="nav__actions">
+      <div class="user-menu">
+        <div class="user-avatar">АД</div>
+        <span class="user-menu__name">Администратор</span>
+      </div>
+      <a href="index.html" class="btn btn--ghost btn--sm">Выйти</a>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar__user">
+        <div class="sidebar__avatar">⚙️</div>
+        <div class="sidebar__name">Администратор</div>
+        <div class="sidebar__role">⚙️ Администратор</div>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="admin-dashboard.html"  class="sidebar__link sidebar__link--active"><span class="icon">📊</span>Обзор</a>
+        <a href="admin-users.html"      class="sidebar__link"><span class="icon">👥</span>Пользователи</a>
+        <a href="admin-orders.html"     class="sidebar__link"><span class="icon">📋</span>Все заявки</a>
+        <a href="admin-tariffs.html"    class="sidebar__link"><span class="icon">💰</span>Тарифы</a>
+        <a href="admin-reports.html"    class="sidebar__link"><span class="icon">📈</span>Отчёты</a>
+        <a href="index.html"            class="sidebar__link"><span class="icon">🏠</span>На главную</a>
+      </nav>
+    </aside>
+
+    <main class="dash-content">
+      <div class="dash-header">
+        <h1>Панель управления</h1>
+        <a href="admin-reports.html" class="btn btn--primary btn--sm">📈 Сформировать отчёт</a>
+      </div>
+
+      <div class="alert alert--warning">⚙️ Панель администратора — управление всей системой.</div>
+
+      <div class="dash-stats">
+        <div class="dash-stat"><div class="dash-stat__label">Пользователей</div><div class="dash-stat__num">54</div><div class="dash-stat__sub">в системе</div></div>
+        <div class="dash-stat"><div class="dash-stat__label">Клиентов</div><div class="dash-stat__num">48</div><div class="dash-stat__sub">зарегистрировано</div></div>
+        <div class="dash-stat"><div class="dash-stat__label">Консультантов</div><div class="dash-stat__num">4</div><div class="dash-stat__sub">активных</div></div>
+        <div class="dash-stat"><div class="dash-stat__label">Заявок всего</div><div class="dash-stat__num">127</div><div class="dash-stat__sub">за всё время</div></div>
+        <div class="dash-stat"><div class="dash-stat__label">Выручка</div><div class="dash-stat__num">1.2 млн ₽</div><div class="dash-stat__sub">за 2026 год</div></div>
+        <div class="dash-stat"><div class="dash-stat__label">Новых заявок</div><div class="dash-stat__num">7</div><div class="dash-stat__sub">сегодня</div></div>
+      </div>
+
+      <!-- Пользователи -->
+      <div class="table-wrap">
+        <div class="table-wrap__head">
+          <span class="table-wrap__title">Пользователи системы</span>
+          <a href="#" class="btn btn--primary btn--sm">+ Добавить</a>
+        </div>
+        <table>
+          <thead><tr><th>ID</th><th>Имя</th><th>Email</th><th>Роль</th><th>Дата регистрации</th><th>Статус</th><th>Действие</th></tr></thead>
+          <tbody>
+            <tr><td>001</td><td>Иван Иванов</td><td>ivan@mail.ru</td><td>Клиент</td><td>01.03.2026</td><td><span class="badge badge--done">Активен</span></td><td><a href="#" class="btn btn--ghost btn--sm">Изменить</a></td></tr>
+            <tr><td>002</td><td>Алексей Смирнов</td><td>alex@bizpro.ru</td><td>Консультант</td><td>01.01.2026</td><td><span class="badge badge--done">Активен</span></td><td><a href="#" class="btn btn--ghost btn--sm">Изменить</a></td></tr>
+            <tr><td>003</td><td>Мария Петрова</td><td>maria@mail.ru</td><td>Клиент</td><td>15.05.2026</td><td><span class="badge badge--done">Активен</span></td><td><a href="#" class="btn btn--ghost btn--sm">Изменить</a></td></tr>
+            <tr><td>004</td><td>Сергей Козлов</td><td>sergey@mail.ru</td><td>Клиент</td><td>20.05.2026</td><td><span class="badge badge--cancel">Заблокирован</span></td><td><a href="#" class="btn btn--danger btn--sm">Разблокировать</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Тарифы -->
+      <div class="table-wrap">
+        <div class="table-wrap__head">
+          <span class="table-wrap__title">Управление тарифами</span>
+          <a href="#" class="btn btn--primary btn--sm">+ Новый тариф</a>
+        </div>
+        <table>
+          <thead><tr><th>Тариф</th><th>Цена</th><th>Период</th><th>Продаж</th><th>Действие</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Старт</strong></td><td>5 000 ₽</td><td>за сессию</td><td>32</td><td><a href="#" class="btn btn--ghost btn--sm">Редактировать</a></td></tr>
+            <tr><td><strong>Рост</strong> ⭐</td><td>25 000 ₽</td><td>в месяц</td><td>61</td><td><a href="#" class="btn btn--ghost btn--sm">Редактировать</a></td></tr>
+            <tr><td><strong>Партнёр</strong></td><td>60 000 ₽</td><td>в месяц</td><td>18</td><td><a href="#" class="btn btn--ghost btn--sm">Редактировать</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

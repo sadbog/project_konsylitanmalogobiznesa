@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Кабинет консультанта — БизнесПро</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo"><span class="logo__mark">БП</span><span class="logo__name">БизнесПро</span></a>
+    <div class="nav__actions">
+      <div class="user-menu">
+        <div class="user-avatar">АС</div>
+        <span class="user-menu__name">Алексей Смирнов</span>
+      </div>
+      <a href="index.html" class="btn btn--ghost btn--sm">Выйти</a>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar__user">
+        <div class="sidebar__avatar">АС</div>
+        <div class="sidebar__name">Алексей Смирнов</div>
+        <div class="sidebar__role">💼 Консультант</div>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="consultant-dashboard.html" class="sidebar__link sidebar__link--active"><span class="icon">📋</span>Заявки клиентов</a>
+        <a href="consultant-schedule.html"  class="sidebar__link"><span class="icon">📅</span>Расписание</a>
+        <a href="consultant-clients.html"   class="sidebar__link"><span class="icon">👥</span>Мои клиенты</a>
+        <a href="client-profile.html"       class="sidebar__link"><span class="icon">👤</span>Профиль</a>
+        <a href="index.html"                class="sidebar__link"><span class="icon">🏠</span>На главную</a>
+      </nav>
+    </aside>
+
+    <main class="dash-content">
+      <div class="dash-header">
+        <h1>Заявки клиентов</h1>
+        <span style="font-size:.85rem;color:var(--muted)">Сегодня: 4 июня 2026</span>
+      </div>
+
+      <div class="alert alert--info">💼 Вы вошли как консультант. Меняйте статусы заявок и загружайте документы.</div>
+
+      <div class="dash-stats">
+        <div class="dash-stat"><div class="dash-stat__label">Новые заявки</div><div class="dash-stat__num">2</div><div class="dash-stat__sub">требуют ответа</div></div>
+        <div class="dash-stat"><div class="dash-stat__label">В работе</div><div class="dash-stat__num">5</div><div class="dash-stat__sub">активные</div></div>
+        <div class="dash-stat"><div class="dash-stat__label">Выполнено</div><div class="dash-stat__num">47</div><div class="dash-stat__sub">за всё время</div></div>
+        <div class="dash-stat"><div class="dash-stat__label">Клиентов</div><div class="dash-stat__num">18</div><div class="dash-stat__sub">всего</div></div>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-wrap__head">
+          <span class="table-wrap__title">Все заявки</span>
+          <select style="padding:6px 12px;border:1px solid var(--border);border-radius:6px;font-family:var(--ff-body);font-size:.82rem">
+            <option>Все статусы</option>
+            <option>Новые</option>
+            <option>В работе</option>
+            <option>Выполнено</option>
+          </select>
+        </div>
+        <table>
+          <thead><tr><th>№</th><th>Клиент</th><th>Услуга</th><th>Дата</th><th>Статус</th><th>Действие</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>007</td><td>Мария Петрова</td><td>Бизнес-планирование</td><td>03.06.2026</td>
+              <td><span class="badge badge--new">Новая</span></td>
+              <td><a href="#" class="btn btn--primary btn--sm">Принять</a></td>
+            </tr>
+            <tr>
+              <td>006</td><td>Сергей Козлов</td><td>Финансовый анализ</td><td>02.06.2026</td>
+              <td><span class="badge badge--new">Новая</span></td>
+              <td><a href="#" class="btn btn--primary btn--sm">Принять</a></td>
+            </tr>
+            <tr>
+              <td>005</td><td>Иван Иванов</td><td>Маркетинг и продвижение</td><td>20.05.2026</td>
+              <td><span class="badge badge--work">В работе</span></td>
+              <td><a href="#" class="btn btn--ghost btn--sm">Завершить</a></td>
+            </tr>
+            <tr>
+              <td>004</td><td>Анна Сидорова</td><td>Оптимизация процессов</td><td>15.05.2026</td>
+              <td><span class="badge badge--work">В работе</span></td>
+              <td><a href="#" class="btn btn--ghost btn--sm">Завершить</a></td>
+            </tr>
+            <tr>
+              <td>003</td><td>Олег Фролов</td><td>Юрид. сопровождение</td><td>01.05.2026</td>
+              <td><span class="badge badge--done">Выполнено</span></td>
+              <td><a href="#" class="btn btn--ghost btn--sm">Документы</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-wrap__head"><span class="table-wrap__title">Загрузить документ клиенту</span></div>
+        <div style="padding:22px">
+          <div class="form-group"><label>Выберите заявку</label>
+            <select><option>Заявка #005 — Иван Иванов</option><option>Заявка #004 — Анна Сидорова</option></select>
+          </div>
+          <div class="form-group"><label>Название документа</label><input type="text" placeholder="Рекомендации по маркетингу.pdf"/></div>
+          <div class="form-group"><label>Файл</label><input type="file" style="padding:8px"/></div>
+          <a href="#" class="btn btn--primary btn--sm">Загрузить клиенту</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

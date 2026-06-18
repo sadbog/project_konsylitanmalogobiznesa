@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Кабинет клиента — БизнесПро</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo"><span class="logo__mark">БП</span><span class="logo__name">БизнесПро</span></a>
+    <div class="nav__actions">
+      <a href="cart.html" class="cart-btn">🛒 Корзина <span class="cart-badge">1</span></a>
+      <div class="user-menu">
+        <div class="user-avatar">ИИ</div>
+        <span class="user-menu__name">Иван Иванов</span>
+      </div>
+      <a href="index.html" class="btn btn--ghost btn--sm">Выйти</a>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar__user">
+        <div class="sidebar__avatar">ИИ</div>
+        <div class="sidebar__name">Иван Иванов</div>
+        <div class="sidebar__role">👤 Клиент</div>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="client-dashboard.html" class="sidebar__link sidebar__link--active"><span class="icon">📋</span>Мои заявки</a>
+        <a href="cart.html"             class="sidebar__link"><span class="icon">🛒</span>Корзина</a>
+        <a href="client-profile.html"   class="sidebar__link"><span class="icon">👤</span>Профиль</a>
+        <a href="index.html#services"   class="sidebar__link"><span class="icon">💼</span>Все услуги</a>
+        <a href="index.html#pricing"    class="sidebar__link"><span class="icon">💰</span>Тарифы</a>
+        <a href="index.html"            class="sidebar__link" style="margin-top:auto"><span class="icon">🏠</span>На главную</a>
+      </nav>
+    </aside>
+
+    <main class="dash-content">
+      <div class="dash-header">
+        <h1>Мои заявки</h1>
+        <a href="index.html#contact" class="btn btn--primary btn--sm">+ Новая заявка</a>
+      </div>
+
+      <div class="alert alert--success">✅ Вы успешно вошли в личный кабинет клиента!</div>
+
+      <div class="dash-stats">
+        <div class="dash-stat"><div class="dash-stat__label">Всего заявок</div><div class="dash-stat__num">3</div><div class="dash-stat__sub">за всё время</div></div>
+        <div class="dash-stat"><div class="dash-stat__label">В работе</div><div class="dash-stat__num">1</div><div class="dash-stat__sub">активные</div></div>
+        <div class="dash-stat"><div class="dash-stat__label">Выполнено</div><div class="dash-stat__num">2</div><div class="dash-stat__sub">завершённые</div></div>
+        <div class="dash-stat"><div class="dash-stat__label">Потрачено</div><div class="dash-stat__num">55 000 ₽</div><div class="dash-stat__sub">общая сумма</div></div>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-wrap__head"><span class="table-wrap__title">История заявок</span></div>
+        <table>
+          <thead><tr><th>№</th><th>Услуга</th><th>Консультант</th><th>Дата</th><th>Сумма</th><th>Статус</th></tr></thead>
+          <tbody>
+            <tr><td>001</td><td>Бизнес-планирование</td><td>А. Смирнов</td><td>01.06.2026</td><td>25 000 ₽</td><td><span class="badge badge--done">Выполнено</span></td></tr>
+            <tr><td>002</td><td>Финансовый анализ</td><td>А. Смирнов</td><td>10.06.2026</td><td>25 000 ₽</td><td><span class="badge badge--done">Выполнено</span></td></tr>
+            <tr><td>003</td><td>Маркетинг и продвижение</td><td>А. Смирнов</td><td>20.06.2026</td><td>5 000 ₽</td><td><span class="badge badge--work">В работе</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-wrap__head"><span class="table-wrap__title">Мои документы</span></div>
+        <table>
+          <thead><tr><th>Документ</th><th>Заявка</th><th>Дата загрузки</th><th>Действие</th></tr></thead>
+          <tbody>
+            <tr><td>📄 Бизнес-план_2026.pdf</td><td>Заявка #001</td><td>05.06.2026</td><td><a href="#" class="btn btn--ghost btn--sm">Скачать</a></td></tr>
+            <tr><td>📊 Финансовая_модель.xlsx</td><td>Заявка #002</td><td>15.06.2026</td><td><a href="#" class="btn btn--ghost btn--sm">Скачать</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>
